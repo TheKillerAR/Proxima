@@ -17,6 +17,6 @@ public interface Docenti_ejbLocal {
 
 	public boolean inserisciDocente(int iddocente, String nome, String cognome, String cf);
 
-	public boolean cancellaDocente(int iddocente);
+	public boolean cancellaDocente(int iddocente); 
 
 }
