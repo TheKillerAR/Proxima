@@ -1,19 +1,19 @@
 package ejb;
 
-import java.sql.Date;
-import java.sql.SQLException;
+//import java.sql.Date;
+//import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.naming.NamingException;
+//import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import Util.ConvEdizione;
+//import Util.ConvEdizione;
 import dao.EdizioneDAO;
 import dto.EdizioneDTO;
-import model.Edizione;
+//import model.Edizione;
 import modeljpa.Corso;
 import modeljpa.Docenti;
 import modeljpa.Sede;
@@ -70,84 +70,115 @@ public class Edizione_ejb implements Edizione_ejbRemote, Edizione_ejbLocal {
 		edto.setDatafi(ejpa.getDatafi());
 		return edto;
 	}
-	
-	public ArrayList<EdizioneDTO> mostraEdizione() {
 
-		EdizioneDAO ed = new EdizioneDAO();
-
-		ArrayList<EdizioneDTO> edt = new ArrayList<EdizioneDTO>();
-		ArrayList<Edizione> ez;
-
-		try {
-			ez = ed.mostraEdizione();
-			for (Edizione e : ez) {
-				EdizioneDTO edto = new EdizioneDTO();
-
-				edto.setIdedizione(e.getIdedizione());
-				edto.setNumero(e.getNumero());
-				edto.setIdcorso(e.getIdcorso());
-				edto.setIdsede(e.getIdsede());
-				edto.setIddocente(e.getIddocente());
-				edto.setDatain(e.getDatain());
-				edto.setDatafi(e.getDatafi());
-
-				edt.add(edto);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (NamingException e) {
-			e.printStackTrace();
-		}
-		return edt;
-
+	@Override
+	public boolean aggiornaEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
+			java.util.Date arg6) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	public EdizioneDTO cercaIdedizione(int idedizione) {
-		EdizioneDAO dao = new EdizioneDAO();
+	@Override
+	public boolean cancellaEdizione(int arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
-		try {
-			return ConvEdizione.convertEdizione(dao.cercaIdedizione(idedizione));
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-		} catch (NamingException e) {
-
-			e.printStackTrace();
-		}
+	@Override
+	public EdizioneDTO cercaIdedizione(int arg0) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public boolean aggiornaEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
-			Date datafi) {
-		EdizioneDAO dao = new EdizioneDAO();
-		try {
-			dao.aggiornaEdizione(idedizione, numero, idcorso, idsede, iddocente, datain, datafi);
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (NamingException e) {
-			e.printStackTrace();
-		}
-
-		return true;
+	@Override
+	public boolean inserisciEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
+			java.util.Date arg6) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	public boolean inserisciEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
-			Date datafi) {
-
-		EdizioneDAO e = new EdizioneDAO();
-
-		e.inserisciEdizione(idedizione, numero, idcorso, idsede, iddocente, datain, datafi);
-
-		return true;
-	}
-
-	public boolean cancellaCorso(int idedizione) {
-
-		EdizioneDAO e = new EdizioneDAO();
-
-		e.cancellaEdizione(idedizione);
-
-		return true;
+	@Override
+	public ArrayList<EdizioneDTO> mostraEdizione() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
+//	public ArrayList<EdizioneDTO> mostraEdizione() {
+//
+//		EdizioneDAO ed = new EdizioneDAO();
+//
+//		ArrayList<EdizioneDTO> edt = new ArrayList<EdizioneDTO>();
+//		ArrayList<Edizione> ez;
+//
+//		try {
+//			ez = ed.mostraEdizione();
+//			for (Edizione e : ez) {
+//				EdizioneDTO edto = new EdizioneDTO();
+//
+//				edto.setIdedizione(e.getIdedizione());
+//				edto.setNumero(e.getNumero());
+//				edto.setIdcorso(e.getIdcorso());
+//				edto.setIdsede(e.getIdsede());
+//				edto.setIddocente(e.getIddocente());
+//				edto.setDatain(e.getDatain());
+//				edto.setDatafi(e.getDatafi());
+//
+//				edt.add(edto);
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//			e.printStackTrace();
+//		}
+//		return edt;
+//
+//	}
+//
+//	public EdizioneDTO cercaIdedizione(int idedizione) {
+//		EdizioneDAO dao = new EdizioneDAO();
+//
+//		try {
+//			return ConvEdizione.convertEdizione(dao.cercaIdedizione(idedizione));
+//		} catch (SQLException e) {
+//
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//
+//			e.printStackTrace();
+//		}
+//		return null;
+//	}
+//
+//	public boolean aggiornaEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
+//			Date datafi) {
+//		EdizioneDAO dao = new EdizioneDAO();
+//		try {
+//			dao.aggiornaEdizione(idedizione, numero, idcorso, idsede, iddocente, datain, datafi);
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//			e.printStackTrace();
+//		}
+//
+//		return true;
+//	}
+//
+//	public boolean inserisciEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
+//			Date datafi) {
+//
+//		EdizioneDAO e = new EdizioneDAO();
+//
+//		e.inserisciEdizione(idedizione, numero, idcorso, idsede, iddocente, datain, datafi);
+//
+//		return true;
+//	}
+//
+//	public boolean cancellaCorso(int idedizione) {
+//
+//		EdizioneDAO e = new EdizioneDAO();
+//
+//		e.cancellaEdizione(idedizione);
+//
+//		return true;
+//	}

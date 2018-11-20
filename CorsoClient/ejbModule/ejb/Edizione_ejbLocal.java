@@ -1,6 +1,6 @@
 package ejb;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 
 import javax.ejb.Local;
@@ -20,6 +20,6 @@ public interface Edizione_ejbLocal {
 	public boolean inserisciEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
 			Date datafi);
 
-	public boolean cancellaCorso(int idedizione);
+	public boolean cancellaEdizione(int idedizione);
 
 }

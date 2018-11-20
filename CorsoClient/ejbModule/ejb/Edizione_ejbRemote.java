@@ -1,7 +1,8 @@
 package ejb;
 
-import java.sql.Date;
+
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.ejb.Remote;
 
@@ -20,6 +21,6 @@ public interface Edizione_ejbRemote {
 	public boolean inserisciEdizione(int idedizione, int numero, int idcorso, int idsede, int iddocente, Date datain,
 			Date datafi);
 
-	public boolean cancellaCorso(int idedizione);
+	public boolean cancellaEdizione(int idedizione);
 
 }

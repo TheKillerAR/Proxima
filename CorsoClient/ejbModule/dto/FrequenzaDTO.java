@@ -1,14 +1,13 @@
 package dto;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 public class FrequenzaDTO implements Serializable {
 
 	private static final long serialVersionUDT = 1L;
 
 	private int idfrequenza;
-	private int Idedizione;
+	private int idedizione;
 	private int idimp;
 	
 	public int getIdfrequenza() {
@@ -18,10 +17,10 @@ public class FrequenzaDTO implements Serializable {
 		this.idfrequenza = idfrequenza;
 	}
 	public int getIdedizione() {
-		return Idedizione;
+		return idedizione;
 	}
 	public void setIdedizione(int idedizione) {
-		Idedizione = idedizione;
+		this.idedizione = idedizione;
 	}
 	public int getIdimp() {
 		return idimp;

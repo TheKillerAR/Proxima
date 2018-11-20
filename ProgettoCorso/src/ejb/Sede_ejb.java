@@ -48,80 +48,124 @@ public class Sede_ejb implements Sede_ejbRemote, Sede_ejbLocal {
 		sd.updateSedejpa(sjpa);
 		return true;
 	}
-
-	public ArrayList<SedeDTO> mostraSede() {
-
-		SedeDAO sd = new SedeDAO();
-
-		ArrayList<SedeDTO> sdt = new ArrayList<SedeDTO>();
-		ArrayList<Sede> sr;
-
-		try {
-
-			sr = sd.mostraSede();
-			for (Sede s : sr) {
-				SedeDTO sdto = new SedeDTO();
-				sdto.setIdsede(s.getIdsede());
-				sdto.setNomesede(s.getNomesede());
-				sdto.setVia(s.getVia());
-				sdto.setCitta(s.getCitta());
-				sdto.setCap(s.getCap());
-
-				sdt.add(sdto);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (NamingException e) {
-			e.printStackTrace();
-		}
-		return sdt;
+	
+	public SedeDTO cercaId(int idsede) {
+		SedeDAO sd = new SedeDAO(em);
+		modeljpa.Sede sjpa = new modeljpa.Sede();
+		sjpa = sd.cercaId(idsede);
+		SedeDTO sdto = new SedeDTO();
+		sdto.setIdsede(sjpa.getIdsede());
+		sdto.setNomesede(sjpa.getNomesede());
+		sdto.setVia(sjpa.getVia());
+		sdto.setCitta(sjpa.getCitta());
+		sdto.setCap(sjpa.getCap());
+		return sdto;
 	}
 
-	public SedeDTO cercaIdsede(int idsede) {
-		SedeDAO dao = new SedeDAO();
+	@Override
+	public boolean aggiornaSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
-		try {
-			return ConvSede.convertSede(dao.cercaIdsede(idsede));
-		} catch (SQLException e) {
+	@Override
+	public boolean cancellaSede(int arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
-			e.printStackTrace();
-		} catch (NamingException e) {
-
-			e.printStackTrace();
-		}
+	@Override
+	public SedeDTO cercaIdsede(int arg0) {
+		// TODO Auto-generated method stub
 		return null;
-
 	}
 
-	public boolean aggiornaSede(int idsede, String nomesede, String via, String citta, int cap) {
-		SedeDAO dao = new SedeDAO();
-
-		try {
-			dao.aggiornaSede(idsede, nomesede, via, citta, cap);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (NamingException e) {
-			e.printStackTrace();
-		}
-
-		return true;
+	@Override
+	public boolean inserisciSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	public boolean inserisciSede(int idsede, String nomesede, String via, String citta, int cap) {
-
-		SedeDAO s = new SedeDAO();
-
-		s.inserisciSede(idsede, nomesede, via, citta, cap);
-
-		return true;
-	}
-
-	public boolean cancellaSede(int idsede) {
-
-		SedeDAO s = new SedeDAO();
-
-		s.cancellaSede(idsede);
-
-		return true;
+	@Override
+	public ArrayList<SedeDTO> mostraSede() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
+
+//	public ArrayList<SedeDTO> mostraSede() {
+//
+//		SedeDAO sd = new SedeDAO();
+//
+//		ArrayList<SedeDTO> sdt = new ArrayList<SedeDTO>();
+//		ArrayList<Sede> sr;
+//
+//		try {
+//
+//			sr = sd.mostraSede();
+//			for (Sede s : sr) {
+//				SedeDTO sdto = new SedeDTO();
+//				sdto.setIdsede(s.getIdsede());
+//				sdto.setNomesede(s.getNomesede());
+//				sdto.setVia(s.getVia());
+//				sdto.setCitta(s.getCitta());
+//				sdto.setCap(s.getCap());
+//
+//				sdt.add(sdto);
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//			e.printStackTrace();
+//		}
+//		return sdt;
+//	}
+//
+//	public SedeDTO cercaIdsede(int idsede) {
+//		SedeDAO dao = new SedeDAO();
+//
+//		try {
+//			return ConvSede.convertSede(dao.cercaIdsede(idsede));
+//		} catch (SQLException e) {
+//
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//
+//			e.printStackTrace();
+//		}
+//		return null;
+//
+//	}
+//
+//	public boolean aggiornaSede(int idsede, String nomesede, String via, String citta, int cap) {
+//		SedeDAO dao = new SedeDAO();
+//
+//		try {
+//			dao.aggiornaSede(idsede, nomesede, via, citta, cap);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} catch (NamingException e) {
+//			e.printStackTrace();
+//		}
+//
+//		return true;
+//	}
+//
+//	public boolean inserisciSede(int idsede, String nomesede, String via, String citta, int cap) {
+//
+//		SedeDAO s = new SedeDAO();
+//
+//		s.inserisciSede(idsede, nomesede, via, citta, cap);
+//
+//		return true;
+//	}
+//
+//	public boolean cancellaSede(int idsede) {
+//
+//		SedeDAO s = new SedeDAO();
+//
+//		s.cancellaSede(idsede);
+//
+//		return true;
+//	}
+//}

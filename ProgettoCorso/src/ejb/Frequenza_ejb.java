@@ -52,7 +52,7 @@ public FrequenzaDTO cercaId(int idfrequenza) {
 	fjpa = fd.cercaId(idfrequenza);
 	FrequenzaDTO fdto = new FrequenzaDTO();
 	fdto.setIdfrequenza(fjpa.getIdfrequenza());
-	fdto.getIdedizione(fjpa.getEdizione().getIdedizione());
+	fdto.setIdedizione(fjpa.getEdizione().getIdedizione());
 	fdto.setIdimp(fjpa.getIdimp());
 	return fdto;
 	
