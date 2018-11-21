@@ -1,19 +1,13 @@
 package ejb;
 
-//import java.sql.Date;
-//import java.sql.SQLException;
-import java.util.ArrayList;
-
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-//import javax.naming.NamingException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-//import Util.ConvEdizione;
 import dao.EdizioneDAO;
 import dto.EdizioneDTO;
-//import model.Edizione;
 import modeljpa.Corso;
 import modeljpa.Docenti;
 import modeljpa.Sede;
@@ -42,7 +36,7 @@ public class Edizione_ejb implements Edizione_ejbRemote, Edizione_ejbLocal {
 		return true;
 	}
 	
-	public boolean updateEdizione(EdizioneDTO edto){
+	public boolean updateEdizionejpa(EdizioneDTO edto){
 		EdizioneDAO ed = new EdizioneDAO(em);
 		modeljpa.Edizione ejpa = new modeljpa.Edizione();
 		ejpa.setIdedizione(edto.getIdedizione());
@@ -71,38 +65,40 @@ public class Edizione_ejb implements Edizione_ejbRemote, Edizione_ejbLocal {
 		return edto;
 	}
 
-	@Override
-	public boolean aggiornaEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
-			java.util.Date arg6) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean cancellaEdizione(int arg0) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public EdizioneDTO cercaIdedizione(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean inserisciEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
-			java.util.Date arg6) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public ArrayList<EdizioneDTO> mostraEdizione() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
+
+//	@Override
+//	public boolean aggiornaEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
+//			java.util.Date arg6) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean cancellaEdizione(int arg0) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public EdizioneDTO cercaIdedizione(int arg0) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public boolean inserisciEdizione(int arg0, int arg1, int arg2, int arg3, int arg4, java.util.Date arg5,
+//			java.util.Date arg6) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public ArrayList<EdizioneDTO> mostraEdizione() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//}
 //	public ArrayList<EdizioneDTO> mostraEdizione() {
 //
 //		EdizioneDAO ed = new EdizioneDAO();

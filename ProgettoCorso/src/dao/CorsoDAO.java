@@ -1,17 +1,6 @@
 package dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-
-import javax.naming.NamingException;
 import javax.persistence.EntityManager;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
-import model.Corso;
 
 public class CorsoDAO {
 

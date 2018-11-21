@@ -1,17 +1,13 @@
 package ejb;
 
-//import java.sql.SQLException;
-import java.util.ArrayList;
-
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-//import Util.ConvCorso;
+
 import dto.CorsoDTO;
-//import model.Corso;
 import dao.CorsoDAO;
 
 @Stateless
@@ -52,37 +48,38 @@ public class Corso_ejb implements Corso_ejbRemote, Corso_ejbLocal {
 		return cdto;
 		
 	}
+}
 
-	@Override
-	public boolean aggiornaCorso(int arg0, String arg1) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+//	@Override
+//	public boolean aggiornaCorso(int arg0, String arg1) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean cancellaCorso(int arg0) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public CorsoDTO cercaIdcorso(int arg0) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public boolean inserisciCorso(int arg0, String arg1) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
 
-	@Override
-	public boolean cancellaCorso(int arg0) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public CorsoDTO cercaIdcorso(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean inserisciCorso(int arg0, String arg1) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public ArrayList<CorsoDTO> mostraCorso() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}	
+//	@Override
+//	public ArrayList<CorsoDTO> mostraCorso() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//}	
 	
 	
 //	public ArrayList<CorsoDTO> mostraCorso() {

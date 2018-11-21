@@ -3,8 +3,8 @@
 	<name>ProgettoEAR</name>
 	<comment></comment>
 	<projects>
-		<project>Progetto1</project>
 		<project>ProgettoCorso</project>
+		<project>ProgettoAnagrafica</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

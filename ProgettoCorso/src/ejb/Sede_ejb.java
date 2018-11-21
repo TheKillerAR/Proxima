@@ -1,18 +1,12 @@
 package ejb;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import Util.ConvSede;
 import dao.SedeDAO;
 import dto.SedeDTO;
-import model.Sede;
 
 @Stateless
 @LocalBean
@@ -61,38 +55,39 @@ public class Sede_ejb implements Sede_ejbRemote, Sede_ejbLocal {
 		sdto.setCap(sjpa.getCap());
 		return sdto;
 	}
-
-	@Override
-	public boolean aggiornaSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean cancellaSede(int arg0) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public SedeDTO cercaIdsede(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean inserisciSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public ArrayList<SedeDTO> mostraSede() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
-
+//
+//	@Override
+//	public boolean aggiornaSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean cancellaSede(int arg0) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public SedeDTO cercaIdsede(int arg0) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public boolean inserisciSede(int arg0, String arg1, String arg2, String arg3, int arg4) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//
+//	@Override
+//	public ArrayList<SedeDTO> mostraSede() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//}
+//
 //	public ArrayList<SedeDTO> mostraSede() {
 //
 //		SedeDAO sd = new SedeDAO();
