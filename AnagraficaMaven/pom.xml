@@ -6,7 +6,7 @@
 	<artifactId>AnagraficaMaven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<dependencies>
 
 		<dependency>
@@ -20,9 +20,8 @@
 			<groupId>proxima</groupId>
 			<artifactId>CorsoClientMaven</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<packaging>war</packaging>
 
 		</dependency>
 	</dependencies>
-	
+
 </project>
