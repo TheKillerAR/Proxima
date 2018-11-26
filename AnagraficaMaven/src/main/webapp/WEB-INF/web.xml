@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FrequenzaServlet</display-name>
+    <servlet-name>FrequenzaServlet</servlet-name>
+    <servlet-class>servlet.FrequenzaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FrequenzaServlet</servlet-name>
+    <url-pattern>/FrequenzaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SedeServlet</display-name>
+    <servlet-name>SedeServlet</servlet-name>
+    <servlet-class>servlet.SedeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SedeServlet</servlet-name>
+    <url-pattern>/SedeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
