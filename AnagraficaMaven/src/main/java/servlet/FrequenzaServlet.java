@@ -14,7 +14,7 @@ import ejb.Frequenza_ejbRemote;
 public class FrequenzaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(mappedName = "java:jboss/exported/ProgettoEAR/ProgettoCorso/Frequenza_ejb!ejb.Frequenza_ejbRemote")
+	@Resource(mappedName = "java:jboss/exported/CorsoMaven-0.0.1-SNAPSHOT/Frequenza_ejb!ejb.Frequenza_ejbRemote")
 	private Frequenza_ejbRemote freejbr;
 
 	public FrequenzaServlet() {

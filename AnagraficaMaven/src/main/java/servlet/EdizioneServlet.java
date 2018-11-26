@@ -16,7 +16,7 @@ import ejb.Edizione_ejbRemote;
 public class EdizioneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(mappedName = "java:jboss/exported/ProgettoEAR/ProgettoCorso/Edizione_ejb!ejb.Edizione_ejbRemote")
+	@Resource(mappedName = "java:jboss/exported/CorsoMaven-0.0.1-SNAPSHOT/Edizione_ejb!ejb.Edizione_ejbRemote")
 	private Edizione_ejbRemote ediejbr;
 
     public EdizioneServlet() {

@@ -16,7 +16,7 @@ import ejb.Docenti_ejbRemote;
 public class DocentiServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(mappedName = "java:jboss/exported/ProgettoEAR/ProgettoCorso/Docenti_ejb!ejb.Docenti_ejbRemote")
+	@Resource(mappedName = "java:jboss/exported/CorsoMaven-0.0.1-SNAPSHOT/Docenti_ejb!ejb.Docenti_ejbRemote")
 	private Docenti_ejbRemote docejbr;
        
     public DocentiServlet() {
