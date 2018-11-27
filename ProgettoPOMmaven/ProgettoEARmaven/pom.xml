@@ -10,13 +10,16 @@
 	<artifactId>ProgettoEARmaven</artifactId>
 	<packaging>ear</packaging>
 
-	<dependecies>
+
+  <dependencies>
 
 		<dependency>
 
 			<groupId>proxima</groupId>
 			<artifactId>CorsoClient2</artifactId>
-			<packaging>war</packaging>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			
 
 		</dependency>
 
@@ -24,7 +27,8 @@
 
 			<groupId>proxima</groupId>
 			<artifactId>ProgettoAnagrafica2</artifactId>
-			<packaging>war</packaging>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
 
 		</dependency>
 
@@ -32,7 +36,8 @@
 
 			<groupId>proxima</groupId>
 			<artifactId>ProgettoContoCorrente2</artifactId>
-			<packaging>war</packaging>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
 
 		</dependency>
 
@@ -40,12 +45,12 @@
 
 			<groupId>proxima</groupId>
 			<artifactId>ProgettoCorso2</artifactId>
-			<packaging>war</packaging>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
 
 		</dependency>
 
-	</dependecies>
-	
+	</dependencies>
 	<build>
 		<plugins>
 

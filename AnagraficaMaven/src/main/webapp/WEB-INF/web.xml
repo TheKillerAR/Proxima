@@ -29,4 +29,14 @@
     <servlet-name>SedeServlet</servlet-name>
     <url-pattern>/SedeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StoricoServlet</display-name>
+    <servlet-name>StoricoServlet</servlet-name>
+    <servlet-class>servlet.StoricoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoricoServlet</servlet-name>
+    <url-pattern>/StoricoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
