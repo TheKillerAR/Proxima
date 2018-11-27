@@ -27,7 +27,7 @@ public class RuoloServlet extends HttpServlet {
 
 		String funzione = request.getParameter("funzione");
 
-		if (funzione.equals("inserisciruolo")) {
+		if (funzione.equals("inserisci")) {
 
 			String nomeruolo = request.getParameter("nomeruolo");
 			int stipendio = Integer.parseInt(request.getParameter("stipendio"));
@@ -42,7 +42,7 @@ public class RuoloServlet extends HttpServlet {
 			}
 		}
 
-		else if (funzione.equals("cerca")) {
+		else if (funzione.equals("cercaid")) {
 
 			int id = Integer.parseInt(request.getParameter("id"));
 			try {

@@ -4,7 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <link rel="stylesheet"
@@ -23,78 +22,52 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 
+<title></title>
 </head>
 
 
 <body>
 
-	<form action="EdizioneServlet" method="post">
+
+	<form action="RuoloServlet" method="post">
 
 
-		<h2>Cerca edizione</h2>
+		<h2>Cerca ruolo</h2>
 
 		<input type='hidden' name="funzione" value="cercaid">
 
-		<h4>Inserisci l' id dell' edizione</h4>
-		<input type="text" name="idedizione" /> <br>
-		<br>
-		<input type="submit" value="Conferma" /> <br>
+		<h4>Inserisci l' id del ruolo</h4>
+		<input type="text" name="id" /> <br> <br> <input
+			type="submit" value="Conferma" /> <br>
 
 		---------------------------------------------------------------------------
 
-	<h2>Crea nuova edizione</h2>
+		<h2>Crea nuovo ruolo</h2>
 
 
 		<input type='hidden' name="funzione" value="inserisci">
 
-		<h4>Inserisci numero</h4>
-		<input type="text" name="numero" />
+		<h4>Inserisci nome ruolo</h4>
+		<input type="text" name="nomeruolo" /> <br>
 
-		<h4>Inserisci l' id del corso</h4>
-		<input type="text" name="idcorso" />
-
-		<h4>Inserisci l'id della sede</h4>
-		<input type="text" name="idsede" />
-
-		<h4>Inserisci l' id del docente</h4>
-		<input type="text" name="iddocente" />
-
-		<h4>Inserisci la data di inizio edizione</h4>
-		<input type="text" name="datain" />
-
-		<h4>Inserisci la data di fine edizione</h4>
-		<input type="text" name="datafi" /> <br>
-		<br>
-		<input type="submit" value="Conferma" /> <br>
+		<h4>Inserisci stipendio</h4>
+		<input type="text" name="stipendio" /> <br> <br> <input
+			type="submit" value="Conferma" /> <br>
 
 		---------------------------------------------------------------------------
 
-		<h2>Aggiorna edizione</h2>
+		<h2>Aggiorna ruolo</h2>
 
 		<input type='hidden' name="funzione" value="aggiorna">
 
-		<h4>Inserisci numero</h4>
-		<input type="text" name="numero" />
+		<h4>Inserisci nome ruolo</h4>
+		<input type="text" name="nomeruolo" /> <br>
 
-		<h4>Inserisci l' id del corso</h4>
-		<input type="text" name="idcorso" />
-
-		<h4>Inserisci l'id della sede</h4>
-		<input type="text" name="idsede" />
-
-		<h4>Inserisci l' id del docente</h4>
-		<input type="text" name="iddocente" />
-
-		<h4>Inserisci la data di inizio edizione</h4>
-		<input type="text" name="datain" />
-
-		<h4>Inserisci la data di fine edizione</h4>
-		<input type="text" name="datafi" /> <br>
-		<br>
-		<input type="submit" value="Conferma" /> <br>
+		<h4>Inserisci stipendio</h4>
+		<input type="text" name="stipendio" /> <br> <br> <input
+			type="submit" value="Conferma" /> <br>
 
 		---------------------------------------------------------------------------
-
 
 
 
