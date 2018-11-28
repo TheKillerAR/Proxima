@@ -29,7 +29,7 @@
 <body>
 
 
-	<form action="ImpiegatoServlet" method="post">
+	<form action="rsricercaimpiegato.jsp" method="post">
 
 
 		<h2>Cerca impiegato</h2>
@@ -39,10 +39,13 @@
 		<h4>Inserisci l' id dell'impiegato</h4>
 		<input type="text" name="idimpiegato" /> <br> <br> <input
 			type="submit" value="Conferma" /> <br>
+			</form>
 
 		---------------------------------------------------------------------------
 
 		<h2>Crea nuovo impiegato</h2>
+		
+		<form action="esitopositivo.jsp" method="post">
 
 
 		<input type='hidden' name="funzione" value="inserisci">
@@ -56,10 +59,13 @@
 		<h4>Inserisci cognome</h4>
 		<input type="text" name="cognome" /> <br> <br> <input
 			type="submit" value="Conferma" /> <br>
+			</form>
 
 		---------------------------------------------------------------------------
 
 		<h2>Aggiorna impiegato</h2>
+		
+		<form action="esitopositivo.jsp" method="post">
 
 		<input type='hidden' name="funzione" value="aggiorna">
 
@@ -72,12 +78,14 @@
 		<h4>Inserisci cognome</h4>
 		<input type="text" name="cognome" /> <br> <br> <input
 			type="submit" value="Conferma" /> <br>
+			
+			</form>
 
 		---------------------------------------------------------------------------
 
 
 
 
-	</form>
+	
 </body>
 </html>
