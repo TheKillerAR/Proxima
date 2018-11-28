@@ -29,7 +29,7 @@
 <body>
 
 
-	<form action="rsricercaimpiegato.jsp" method="post">
+	<form action="${pageContext.request.contextPath}/ImpiegatoServlet" method="post">
 
 
 		<h2>Cerca impiegato</h2>
@@ -37,7 +37,20 @@
 		<input type='hidden' name="funzione" value="cercaid">
 
 		<h4>Inserisci l' id dell'impiegato</h4>
-		<input type="text" name="idimpiegato" /> <br> <br> <input
+		<input type="text" name="id" /> <br> <br> <input
+			type="submit" value="Conferma" /> <br>
+			</form>
+
+		---------------------------------------------------------------------------
+		
+		<h2>Cerca impiegato tramite il nome</h2>
+		
+		<form action="${pageContext.request.contextPath}/ImpiegatoServlet" method="post">
+
+		<input type='hidden' name="funzione" value="cercanome">
+
+		<h4>Inserisci il nome dell'impiegato</h4>
+		<input type="text" name="nome" /> <br> <br> <input
 			type="submit" value="Conferma" /> <br>
 			</form>
 
@@ -45,7 +58,7 @@
 
 		<h2>Crea nuovo impiegato</h2>
 		
-		<form action="esitopositivo.jsp" method="post">
+		<form action="${pageContext.request.contextPath}/esitopositivo.jsp" method="post">
 
 
 		<input type='hidden' name="funzione" value="inserisci">
@@ -65,7 +78,7 @@
 
 		<h2>Aggiorna impiegato</h2>
 		
-		<form action="esitopositivo.jsp" method="post">
+		<form action="${pageContext.request.contextPath}/esitopositivo.jsp" method="post">
 
 		<input type='hidden' name="funzione" value="aggiorna">
 
@@ -82,9 +95,13 @@
 			</form>
 
 		---------------------------------------------------------------------------
+		<br> <br>
+		<form action="${pageContext.request.contextPath}/ImpiegatoServlet" method="post">
+		<input type='hidden' name="funzione" value="mostratutti">
+		
+		<input type="submit" value="Mostra tutti gli impiegati" /> <br>
 
-
-
+		</form>
 
 	
 </body>

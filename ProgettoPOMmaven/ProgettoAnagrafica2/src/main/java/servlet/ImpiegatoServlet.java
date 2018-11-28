@@ -27,6 +27,8 @@ public class ImpiegatoServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String funzione = request.getParameter("funzione");
+		
+		System.out.println("la fuzione è "+funzione);
 
 		if (funzione.equals("inserisci")) {
 
@@ -39,6 +41,9 @@ public class ImpiegatoServlet extends HttpServlet {
 			try {
 
 				ImpiegatoDao.insert(imp);
+				
+				request.getRequestDispatcher("/jspIMPIEGATO/rsinserisciimpiegato.jsp").forward(request, response);
+				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -48,11 +53,11 @@ public class ImpiegatoServlet extends HttpServlet {
 
 			int id = Integer.parseInt(request.getParameter("id"));
 			try {
-				ImpiegatoDao.searchId(id);
-				
-				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/rsricercaimpiegato.jsp");
-				
-		 		dispatcher.forward(request,response);
+				Impiegato impCercato = ImpiegatoDao.searchId(id);
+				ArrayList<Impiegato> listaImpiegato = new ArrayList<Impiegato>();
+				listaImpiegato.add(impCercato);
+				request.getSession().setAttribute("listaImp", listaImpiegato);
+				request.getRequestDispatcher("/jspIMPIEGATO/rsmostratuttiimpiegati.jsp").forward(request, response);
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -64,17 +69,32 @@ public class ImpiegatoServlet extends HttpServlet {
 			try {
 				
 			listaimpiegati = ImpiegatoDao.getImpiegati();
+			
+			request.getSession().setAttribute("listaImp", listaimpiegati);
+			
+			request.getRequestDispatcher("/jspIMPIEGATO/rsmostratuttiimpiegati.jsp").forward(request, response);
+			
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			request.getSession().setAttribute("listaimpiegati", listaimpiegati);
+			
 		}
 
 		else if (funzione.equals("cercanome")) {
 
 			String nome = request.getParameter("nome");
+			
+			ArrayList<Impiegato> listaimpiegati = null;
+			
 			try {
-				ImpiegatoDao.searchNome(nome);
+				listaimpiegati = ImpiegatoDao.searchNome(nome);
+				
+				request.getSession().setAttribute("listaImp", listaimpiegati);
+				
+				request.getRequestDispatcher("/jspIMPIEGATO/rsmostratuttiimpiegati.jsp").forward(request, response);
+				
+				
+				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

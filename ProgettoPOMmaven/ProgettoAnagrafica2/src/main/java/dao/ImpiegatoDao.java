@@ -46,7 +46,7 @@ public class ImpiegatoDao {
 
 	}
 
-	public static void searchId(int id) throws SQLException {
+	public static Impiegato searchId(int id) throws SQLException {
 
 		Impiegato imp = new Impiegato();
 		Connection con = null;
@@ -66,7 +66,6 @@ public class ImpiegatoDao {
 				imp.setNome(res.getString("nome"));
 				imp.setCognome(res.getString("cognome"));
 
-				System.out.println(imp);
 
 			}
 
@@ -78,7 +77,7 @@ public class ImpiegatoDao {
 			con.close();
 
 		}
-
+		return imp;
 	}
 
 	public static ArrayList<Impiegato> searchNome(String nome) throws SQLException {
@@ -106,7 +105,7 @@ public class ImpiegatoDao {
 				imp.setCognome(res.getString("cognome"));
 				imp.setCf(res.getString("cf"));
 
-				System.out.println(imp);
+				impList.add(imp);
 			}
 		} catch (Exception e) {
 
